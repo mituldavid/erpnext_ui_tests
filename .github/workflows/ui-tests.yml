@@ -96,7 +96,7 @@ jobs:
           TYPE: ui
 
       - name: Instrument Source Code
-        run: cd ~/frappe-bench/apps/erpnext/ && npx nyc instrument -x 'erpnext/public/dist/**' -x '**/*.bundle.js' --compact=true --reporter=clover --report-dir=.cypress-coverage --in-place erpnext
+        run: cd ~/frappe-bench/apps/erpnext/ && npx nyc instrument -x 'erpnext/public/dist/**' -x '**/*.bundle.js' --compact=true --reporter=clover --in-place erpnext
 
       - name: Site Setup
         run: cd ~/frappe-bench/ && bench --site test_site execute erpnext.setup.utils.before_tests
