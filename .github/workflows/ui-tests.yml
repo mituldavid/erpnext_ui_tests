@@ -119,6 +119,9 @@ jobs:
         if: ${{ failure() }}
         run: cat ~/frappe-bench/bench_run_logs.txt
 
+      - name: Log Coverage Report
+        run: cat ~/frappe-bench/apps/erpnext_ui_tests/coverage/clover.xml
+        
       - name: Upload Coverage Data
         uses: codecov/codecov-action@v2
         with:
