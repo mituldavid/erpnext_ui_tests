@@ -124,6 +124,5 @@ jobs:
         with:
           name: Cypress
           fail_ci_if_error: true
-          root_dir: /home/runner/frappe-bench/apps/erpnext
-          directory: /home/runner/frappe-bench/apps/erpnext/
+          directory: /home/runner/frappe-bench/apps/erpnext_ui_tests/coverage/
           verbose: true
